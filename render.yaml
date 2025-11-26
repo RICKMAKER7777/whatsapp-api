@@ -1,4 +1,4 @@
-
+# render.yaml
 services:
   - type: web
     name: whatsapp-multi-empresa-api
@@ -9,6 +9,9 @@ services:
     buildCommand: npm install
     startCommand: npm start
     autoDeploy: true
+    disk:
+      mountPath: /data
+      sizeGB: 1
     envVars:
       - key: NODE_ENV
         value: production

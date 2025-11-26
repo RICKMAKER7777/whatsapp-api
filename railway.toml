@@ -1,0 +1,9 @@
+[build]
+builder = "Docker"
+
+[deploy]
+restartPolicyType = "on_failure"
+
+[[mounts]]
+source="data"
+destination="/mnt/data"

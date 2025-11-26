@@ -1,16 +1,13 @@
+FROM node:18
 
-# Use node official image
-FROM node:18-alpine
+WORKDIR /app
 
-WORKDIR /usr/src/app
+COPY package*.json ./
 
-# Install dependencies, sqlite3 needs build-base
-RUN apk add --no-cache python3 make g++ && rm -rf /var/cache/apk/*
-
-COPY package.json package.json
-RUN npm install --production
+RUN npm install
 
 COPY . .
 
-EXPOSE 10000
-CMD [ "node", "index.js" ]
+EXPOSE 3000
+
+CMD ["node", "index.js"]
