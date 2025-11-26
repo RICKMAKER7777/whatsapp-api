@@ -66,5 +66,5 @@ docker run -p 10000:10000 --env NODE_ENV=production whatsapp-api:latest
 4. Adicione a variável de ambiente `NODE_ENV=production` (opcional).
 
 ## Observações
-- O diretório `auth_sessions` contém as credenciais do Baileys (persistência). Não compartilhe.
+- O diretório `/data/auth_sessions` contém as credenciais do Baileys (persistência). Não compartilhe.
 - `.gitignore` inclui `auth_*` e `sessions.db`.
