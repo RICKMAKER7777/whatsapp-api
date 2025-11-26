@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cors());
 
 const DB_FILE = process.env.DB_FILE || "./sessions.db";
-const SESSIONS_DIR = process.env.SESSIONS_DIR || ".//data/auth_sessions";
+const SESSIONS_DIR = process.env.SESSIONS_DIR || ".//data//data/auth_sessions";
 
 if (!fs.existsSync(SESSIONS_DIR)) fs.mkdirSync(SESSIONS_DIR, { recursive: true });
 
